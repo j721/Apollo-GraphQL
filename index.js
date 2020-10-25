@@ -30,4 +30,9 @@ const typeDefs = gql`
         avatarUrl: String
         messages: [Message!]!
     }
+    type Message{
+        id: ID!
+        body: String!
+        createdAt: String!
+    }
     `
