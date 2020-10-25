@@ -67,3 +67,7 @@ const resolvers = {
       messages: user =>db.messages.filter(message =>message.userId == user.id) //find messages by user Id
   }
 };
+
+const server = new ApolloServer({typeDefs, resolvers}) //instantiates an http server with Express framework behind the scenes
+
+server.listen().then(({url}) => console.log(url))
