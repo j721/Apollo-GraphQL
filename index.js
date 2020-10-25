@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server");
-const crypto = require("crypto");
+const crypto = require("crypto"); //crypto module comes from node.js
 
 const db = {
   users: [
@@ -50,6 +50,17 @@ const resolvers = {
   Query: {
     users: () => db.users, //connect to mock database
     user: (root, { id }) => db.users.find((user) => user.id === id), //find single user by the id,
-    messages: () =>db.messages, //connect to mock database
+    messages: () => db.messages, //connect to mock database
+  },
+  Mutation: {
+    addUser: (root, { email, name }) => {
+      const user = {
+        id: crypto.randomBytes(10).toString("hex"), //generates a random encrypted hex string for the user's id
+        email,
+        name,
+      };
+      db.users.push(user);
+      return user;
+    },
   },
 };
