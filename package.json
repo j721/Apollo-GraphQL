@@ -1,0 +1,27 @@
+{
+  "name": "Apollo-GraphQL",
+  "version": "1.0.0",
+  "description": "Created basic apollo-graphQL server",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j721/Apollo-GraphQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j721/Apollo-GraphQL/issues"
+  },
+  "homepage": "https://github.com/j721/Apollo-GraphQL#readme",
+  "dependencies": {
+    "apollo-server": "^2.18.2",
+    "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
