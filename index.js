@@ -20,4 +20,14 @@ const typeDefs = gql`
         user(id: ID!): User
         messages: [Message!]!
     }
+    type Mutation{
+        addUser(email: String!, name: String): User!
+    }
+    type User{
+        id: ID!
+        email: String!
+        name: String
+        avatarUrl: String
+        messages: [Message!]!
+    }
     `
