@@ -35,7 +35,7 @@ const typeDefs = gql`
   type User {
     id: ID!
     email: String!
-    name: String
+    name: String!
     avatarUrl: String
     messages: [Message!]!
   }
