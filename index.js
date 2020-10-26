@@ -25,17 +25,17 @@ const db = {
 
 const typeDefs = gql`
   type Query {
-    users: [User!]!
-    user(id: ID!): User
+    users: [User!]!  #object User cannot be null, as well as the list of users can not be null (User's array cannot hold any null values)
+    user(id: ID!): User #each User requires an id that's non-nullable
     messages: [Message!]!
   }
   type Mutation {
-    addUser(email: String!, name: String): User!
+    addUser(email: String!, name: String!): User! #requires email and name to addUser
   }
   type User {
     id: ID!
     email: String!
-    name: String
+    name: String!
     avatarUrl: String
     messages: [Message!]!
   }
@@ -63,4 +63,11 @@ const resolvers = {
       return user;
     },
   },
+  User: {
+      messages: user =>db.messages.filter(message =>message.userId == user.id) //find messages by user Id
+  }
 };
+
+const server = new ApolloServer({typeDefs, resolvers}) //instantiates an http server with Express framework behind the scenes
+
+server.listen().then(({url}) => console.log(url))
