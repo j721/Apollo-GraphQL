@@ -8,6 +8,8 @@ const {
     NODE_ENV ='development'
 } = process.env
 
+const IN_PROD = NODE_ENV !== 'production' //if the node environment does not equal the production variable, then we want to enable playground
+
 const app = express()
 
 app.disable('x-powered-by') //disable one of the headers
@@ -15,6 +17,7 @@ app.disable('x-powered-by') //disable one of the headers
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    playground:!IN_PROD
 })
 
 server.applyMiddleware({app})
