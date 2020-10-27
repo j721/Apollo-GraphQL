@@ -19,6 +19,7 @@
   "homepage": "https://github.com/j721/Apollo-GraphQL#readme",
   "dependencies": {
     "apollo-server-express": "^2.18.2",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "graphql": "^15.3.0"
   },
