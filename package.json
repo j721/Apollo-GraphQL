@@ -1,10 +1,10 @@
 {
-  "name": "Apollo-GraphQL",
+  "name": "chat",
   "version": "1.0.0",
   "description": "Created basic apollo-graphQL server",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon"
+    "dev": "NODE ENV=development nodemon"
   },
   "repository": {
     "type": "git",
