@@ -1,11 +1,11 @@
 import {gql} from 'apollo-server-express';
 
 export default gql`
-type Query{
+extend type Query{
 
 }
 
-type Mutation{
+extend type Mutation{
 
 }
 
