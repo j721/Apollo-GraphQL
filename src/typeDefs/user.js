@@ -2,7 +2,7 @@ import {gql} from 'apollo-server-express';
 
 export default gql`
 extend type Query{
-
+    user(id: ID!): User #may or may not return the User object
 }
 
 extend type Mutation{
