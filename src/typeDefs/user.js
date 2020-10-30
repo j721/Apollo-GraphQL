@@ -10,7 +10,10 @@ extend type Mutation{
 }
 
 type User{
-
-
+    id: ID!,
+    email: String!
+    username: String!
+    name: String!
+    createdAt: String!
 }
 `
