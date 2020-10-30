@@ -4,7 +4,7 @@
   "description": "Created basic apollo-graphQL server",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE ENV=development nodemon"
+    "dev": "NODE ENV=development nodemon -r esm"
   },
   "repository": {
     "type": "git",
