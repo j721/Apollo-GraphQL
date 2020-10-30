@@ -6,7 +6,7 @@ extend type Query{
 }
 
 extend type Mutation{
-
+    signUp(email: String!, username: String!, name: String! ): User #User object might or might not be returned if the user has already been registered 
 }
 
 type User{
