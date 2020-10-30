@@ -3,6 +3,7 @@ import {gql} from 'apollo-server-express';
 export default gql`
 extend type Query{
     user(id: ID!): User #may or may not return the User object
+    users: [User!]! #returns an array of users that are non-nullable , as well as the User objects are non-nullable. Array either returns a list of non-nullable user objects or is empty 
 }
 
 extend type Mutation{
