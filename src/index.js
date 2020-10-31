@@ -8,7 +8,7 @@ const {
     NODE_ENV ='development'
 } = process.env
 
-const IN_PROD = NODE_ENV !== 'production' //if the node environment does not equal the production variable, then we want to enable playground
+const IN_PROD = NODE_ENV === 'production' 
 
 const app = express()
 
