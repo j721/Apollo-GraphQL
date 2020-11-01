@@ -1,10 +1,7 @@
-<<<<<<< Updated upstream
-// const { ApolloServer, gql } = require("apollo-server");
-=======
 import './src'
 
-const { ApolloServer, gql } = require("apollo-server");
->>>>>>> Stashed changes
+// const { ApolloServer, gql } = require("apollo-server");
+
 // const crypto = require("crypto"); //crypto module comes from node.js
 
 // const db = {
